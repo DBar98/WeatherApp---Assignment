@@ -1,0 +1,25 @@
+/* 
+  Localizable.strings
+  WeatherApp
+
+  Created by Dávid Baľak on 04/06/2022.
+  
+*/
+
+"Favourites" = "Obľúbené";
+"Search" = "Vyhľadávať";
+"Map" = "Mapa";
+"Satellite" = "Satelit";
+"Standard" = "Štandard";
+"Feels like" = "Pocitovo";
+"Location services on the device are not allowed." = "Lokalizačné službz sú nedostupné.";
+"The specified data could not be found." = "Dáta nie sú dostupné.";
+"Unable to add data to favourites." = "Nie je možné pridať k obľúbeným.";
+"Unable to show favourite locations." = "Nie je možné zobraziť zoznam oblúbených lokalít.";
+"Unable to display location name." = "Nie je možné zobraziť názov lokality";
+"Please try again later or check the Internet settings on your device." = "Skúste neskôr, prípadne skontrolujte nastavenia pripojenia k internetu na vašom zariadení.";
+"Sorry, an unexpected error occurred." = "Ospravedlňujeme sa, nastala neočakávaná chyba.";
+"Add to favourites" = "Pridať k obľúbeným";
+"Remove from favourites" = "Odstrániť z obľúbených";
+"Error" = "Chyba";
+"Connection Error" = "Chyba pripojenia";

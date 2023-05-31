@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Map View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="MapViewController" id="Y6W-OH-hqX" customClass="MapViewController" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="1u0-IP-pNn">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="803"/>
+                            </mapView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Sn4-gT-Ocg">
+                                <rect key="frame" x="8" y="811" width="398" height="35"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="OdZ-bF-Fx8">
+                                        <rect key="frame" x="0.0" y="0.0" width="310.5" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="t5n-La-EWy"/>
+                                        </constraints>
+                                        <segments>
+                                            <segment title="First"/>
+                                            <segment title="Second"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="segmentedControlPressed:" destination="Y6W-OH-hqX" eventType="valueChanged" id="TtM-Ok-XLI"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZU6-Mf-FEB">
+                                        <rect key="frame" x="326.5" y="0.0" width="71.5" height="35"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="location" catalog="system"/>
+                                        <connections>
+                                            <action selector="locationButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="J7j-lE-jdM"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Sn4-gT-Ocg" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="8" id="3zh-vL-6BH"/>
+                            <constraint firstItem="Sn4-gT-Ocg" firstAttribute="top" secondItem="1u0-IP-pNn" secondAttribute="bottom" constant="8" id="8mV-2g-W3A"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Sn4-gT-Ocg" secondAttribute="bottom" constant="16" id="FyS-9S-0h6"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="1u0-IP-pNn" secondAttribute="trailing" id="K5q-ye-dvB"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Sn4-gT-Ocg" secondAttribute="trailing" constant="8" id="huY-rP-miL"/>
+                            <constraint firstItem="1u0-IP-pNn" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="qP0-9Z-ajC"/>
+                            <constraint firstItem="1u0-IP-pNn" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="u4s-Lo-1Xh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapSegmentedControl" destination="OdZ-bF-Fx8" id="Leu-cw-Q7J"/>
+                        <outlet property="mapView" destination="1u0-IP-pNn" id="QL4-WJ-kBq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="113.83928571428571"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="location" catalog="system" width="128" height="118"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

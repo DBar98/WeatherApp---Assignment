@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FavouriteLocationsCollectionViewCell" id="bun-ZB-OKf" customClass="FavouriteLocationsCollectionViewCell" customModule="WeatherApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="298" height="226"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="wUd-9N-7KE">
+                <rect key="frame" x="0.0" y="0.0" width="298" height="226"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="FnX-qF-yZL">
+                        <rect key="frame" x="0.0" y="0.0" width="298" height="181"/>
+                    </mapView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dsZ-07-9Q3">
+                        <rect key="frame" x="0.0" y="147" width="298" height="79"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="xE3-iZ-P2o">
+                                <rect key="frame" x="8" y="17" width="41.5" height="45"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OSk-aa-NhD">
+                                        <rect key="frame" x="0.0" y="0.0" width="41.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fbb-yI-YZI">
+                                        <rect key="frame" x="0.0" y="24.5" width="41.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="xE3-iZ-P2o" firstAttribute="centerY" secondItem="dsZ-07-9Q3" secondAttribute="centerY" id="8o9-II-5uj"/>
+                            <constraint firstItem="xE3-iZ-P2o" firstAttribute="leading" secondItem="dsZ-07-9Q3" secondAttribute="leading" constant="8" id="BRr-EX-Enj"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="FnX-qF-yZL" firstAttribute="top" secondItem="wUd-9N-7KE" secondAttribute="top" id="5g1-j2-g1V"/>
+                    <constraint firstItem="FnX-qF-yZL" firstAttribute="height" secondItem="wUd-9N-7KE" secondAttribute="height" multiplier="0.8" id="Mg5-7L-cnv"/>
+                    <constraint firstAttribute="bottom" secondItem="dsZ-07-9Q3" secondAttribute="bottom" id="Tgp-Kb-5bI"/>
+                    <constraint firstItem="dsZ-07-9Q3" firstAttribute="height" secondItem="wUd-9N-7KE" secondAttribute="height" multiplier="0.35" id="VSb-pV-0rX"/>
+                    <constraint firstItem="dsZ-07-9Q3" firstAttribute="leading" secondItem="wUd-9N-7KE" secondAttribute="leading" id="bNu-E2-Xyg"/>
+                    <constraint firstAttribute="trailing" secondItem="dsZ-07-9Q3" secondAttribute="trailing" id="swF-Mn-Ged"/>
+                    <constraint firstAttribute="trailing" secondItem="FnX-qF-yZL" secondAttribute="trailing" id="vkU-0C-hKk"/>
+                    <constraint firstItem="FnX-qF-yZL" firstAttribute="leading" secondItem="wUd-9N-7KE" secondAttribute="leading" id="zTr-so-UQ0"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="298" height="226"/>
+            <connections>
+                <outlet property="cellBottomView" destination="dsZ-07-9Q3" id="cKW-yG-SIe"/>
+                <outlet property="cellMapView" destination="FnX-qF-yZL" id="t8T-4m-fme"/>
+                <outlet property="cityNameLabel" destination="OSk-aa-NhD" id="KAD-E4-z8X"/>
+                <outlet property="countryNameLabel" destination="fbb-yI-YZI" id="jQp-58-325"/>
+            </connections>
+            <point key="canvasLocation" x="53.623188405797109" y="-350.22321428571428"/>
+        </collectionViewCell>
+    </objects>
+</document>
